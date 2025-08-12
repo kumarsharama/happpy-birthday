@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Moment</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<style>
+.special-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    height: 100vh;
+    justify-content: center;
+    animation: reveal 1s ease-in-out;
+    background: radial-gradient(circle at top, #ffb6c1, #ff69b4, #ff1493);
+}
+
+@keyframes reveal {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+video, audio {
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4);
+}
+
+.back-btn {
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    color: white;
+    font-size: 1rem;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(45deg, #ff85c1, #ff2a91);
+}
+</style>
+</head>
+<body>
+
+<div class="special-container">
+    <video autoplay muted playsinline loop>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+    <audio autoplay loop>
+        <source src="voice.mp3" type="audio/mpeg">
+    </audio>
+    <button class="back-btn" onclick="location.href='index.html'">⬅ Back to Slideshow</button>
+</div>
+
+</body>
+</html>
