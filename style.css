@@ -1,0 +1,83 @@
+/* General body style */
+body {
+    margin: 0;
+    font-family: 'Pacifico', cursive;
+    background: radial-gradient(circle at top, #ffb6c1, #ff69b4, #ff1493);
+    overflow: hidden;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+/* Slideshow images */
+#slideshow {
+    width: 100%;
+    display: block;
+    animation: fadeZoomSlide 3s ease-in-out infinite;
+    border-radius: 20px;
+}
+
+/* Keyframes for smooth fade + zoom + slide */
+@keyframes fadeZoomSlide {
+    0% { opacity: 0; transform: scale(1) translateX(50px); }
+    25% { opacity: 1; transform: scale(1.05) translateX(0); }
+    75% { opacity: 1; transform: scale(1.05) translateX(0); }
+    100% { opacity: 0; transform: scale(1) translateX(-50px); }
+}
+
+/* Love Button */
+.love-btn {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(45deg, #ff69b4, #ff1493);
+    color: white;
+    font-size: 1.3rem;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.love-btn:hover {
+    transform: translateX(-50%) scale(1.1);
+    background: linear-gradient(45deg, #ff85c1, #ff2a91);
+}
+
+/* Floating Hearts Background */
+.hearts-bg {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+    background-image: url('https://i.ibb.co/PMhqR3n/heart.png');
+    background-size: 50px;
+    animation: floatHearts 20s linear infinite;
+    opacity: 0.2;
+}
+
+@keyframes floatHearts {
+    0% { background-position: 0 0; }
+    100% { background-position: 0 1000px; }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .love-btn {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
